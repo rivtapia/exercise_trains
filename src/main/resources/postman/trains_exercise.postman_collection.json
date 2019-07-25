@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "bb3ea474-fd7f-46ad-ab55-fe905cff6e9e",
+		"name": "trains_exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "trains/distances",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"graph\": [\n        {\n            \"origin\": \"A\",\n            \"destiny\": \"B\",\n            \"distance\": 5\n        },\n        {\n            \"origin\": \"B\",\n            \"destiny\": \"C\",\n            \"distance\": 4\n        },\n        {\n            \"origin\": \"C\",\n            \"destiny\": \"D\",\n            \"distance\": 8\n        },\n        {\n            \"origin\": \"D\",\n            \"destiny\": \"C\",\n            \"distance\": 8\n        },\n        {\n            \"origin\": \"D\",\n            \"destiny\": \"E\",\n            \"distance\": 6\n        },\n        {\n            \"origin\": \"A\",\n            \"destiny\": \"D\",\n            \"distance\": 5\n        },\n        {\n            \"origin\": \"C\",\n            \"destiny\": \"E\",\n            \"distance\": 2\n        },\n        {\n            \"origin\": \"E\",\n            \"destiny\": \"B\",\n            \"distance\": 3\n        },\n        {\n            \"origin\": \"A\",\n            \"destiny\": \"E\",\n            \"distance\": 7\n        }\n    ],\n    \"routes\": [\n        {\n            \"routeSteps\": [\n                \"A\",\n                \"B\",\n                \"C\"\n            ]\n        },\n        {\n            \"routeSteps\": [\n                \"A\",\n                \"D\"\n            ]\n        },\n        {\n            \"routeSteps\": [\n                \"A\",\n                \"D\",\n                \"C\"\n            ]\n        },\n        {\n            \"routeSteps\": [\n                \"A\",\n                \"E\",\n                \"B\",\n                \"C\",\n                \"D\"\n            ]\n        },\n        {\n            \"routeSteps\": [\n                \"A\",\n                \"E\",\n                \"D\"\n            ]\n        }\n    ]\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/trains/distances",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"trains",
+						"distances"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
